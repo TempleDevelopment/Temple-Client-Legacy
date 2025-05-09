@@ -16,7 +16,7 @@
 </p>
 
 ---
-### Temple Client is a free and open-source utility mod that enhances the anarchy server experience. 
+### Temple Client Legacy is a free and open-source utility mod that enhances the anarchy server experience. 
 ---
 
 
