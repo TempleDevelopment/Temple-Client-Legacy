@@ -19,8 +19,6 @@
 ### Temple Client Legacy is a free and open-source utility mod that enhances the anarchy server experience. 
 ---
 
-
-
 ## FAQ
 
 | Minecraft Version          | Forge 1.12.2                     |
