@@ -6,7 +6,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Java-0055A4?style=for-the-badge&logo=openjdk&logoColor=white">
   <img src="https://img.shields.io/badge/Intellij%20Idea-003366?logo=intellij-idea&style=for-the-badge&logoColor=white">
-  <img src="https://img.shields.io/github/downloads/TempleDevelopment/Temple-Client/total?style=for-the-badge&label=Downloads&color=007ACC">
+  <img src="https://img.shields.io/github/downloads/TempleDevelopment/Temple-Client-Legacy/total?style=for-the-badge&label=Downloads&color=007ACC">
   <a href="https://discord.gg/j6hTUB5GBx" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
   </a>
