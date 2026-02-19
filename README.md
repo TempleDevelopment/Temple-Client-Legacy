@@ -45,3 +45,9 @@ Normal GUI|CSGO GUI
 - [Zane2b2t](https://github.com/Zane2b2t)
 - [XeonLyfe](https://github.com/XeonLyfe)
 - [RacoonDog](https://github.com/RacoonDog)
+
+---
+
+<p align="center">
+  Built by <a href="https://templeenterprise.com"><b>Temple Enterprise LLC</b></a>
+</p>
