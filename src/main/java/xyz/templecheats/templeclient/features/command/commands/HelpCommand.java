@@ -25,11 +25,15 @@ public class HelpCommand extends Command {
         Minecraft.getMinecraft().player.sendMessage(new TextComponentString(commandPrefix + ".disconnect - Disconnects from game session"));
         Minecraft.getMinecraft().player.sendMessage(new TextComponentString(commandPrefix + ".friend - Adds, removes & lists your friends"));
         Minecraft.getMinecraft().player.sendMessage(new TextComponentString(commandPrefix + ".fakeplayer - Adds a FakePlayer"));
+        Minecraft.getMinecraft().player.sendMessage(new TextComponentString(commandPrefix + ".follow - Baritone: follow a player"));
+        Minecraft.getMinecraft().player.sendMessage(new TextComponentString(commandPrefix + ".goto - Baritone: path to coordinates"));
         Minecraft.getMinecraft().player.sendMessage(new TextComponentString(commandPrefix + ".help - Shows this help message"));
         Minecraft.getMinecraft().player.sendMessage(new TextComponentString(commandPrefix + ".ip - Copies current server ip to your clipboard"));
+        Minecraft.getMinecraft().player.sendMessage(new TextComponentString(commandPrefix + ".mine - Baritone: mine blocks by name"));
         Minecraft.getMinecraft().player.sendMessage(new TextComponentString(commandPrefix + ".namemc - Opens the NameMC profile of a player"));
         Minecraft.getMinecraft().player.sendMessage(new TextComponentString(commandPrefix + ".openfolder - Opens the Temple Client folder"));
         Minecraft.getMinecraft().player.sendMessage(new TextComponentString(commandPrefix + ".panic - Toggles the Panic module"));
+        Minecraft.getMinecraft().player.sendMessage(new TextComponentString(commandPrefix + ".stop - Baritone: cancel all pathing"));
         Minecraft.getMinecraft().player.sendMessage(new TextComponentString(commandPrefix + ".toggle - Toggles a module"));
     }
 }

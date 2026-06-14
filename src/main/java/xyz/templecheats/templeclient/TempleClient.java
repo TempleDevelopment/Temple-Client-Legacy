@@ -33,7 +33,7 @@ import java.lang.reflect.Field;
 public class TempleClient {
     public static final String MODID = "templeclient";
     public static final String NAME = "Temple Client";
-    public static final String VERSION = "1.9.7";
+    public static final String VERSION = "1.9.8";
     public static final MethodHandles.Lookup LOOKUP = MethodHandles.lookup();
     public static String name = NAME + " " + VERSION;
     public static AnnotatedEventManager eventBus;
@@ -123,11 +123,12 @@ public class TempleClient {
     }
 
     public static void setSession(Session s) {
-        Class<? extends Minecraft> mc = Minecraft.getMinecraft().getClass();
         try {
+            // Match by exact type rather than the first assignable field so this keeps working in
+            // an obfuscated build (where the field is renamed but its Session type is preserved).
             Field session = null;
-            for (Field f : mc.getDeclaredFields()) {
-                if (f.getType().isInstance(s)) {
+            for (Field f : Minecraft.class.getDeclaredFields()) {
+                if (f.getType() == Session.class) {
                     session = f;
                     break;
                 }
@@ -137,13 +138,13 @@ public class TempleClient {
             }
             session.setAccessible(true);
             session.set(Minecraft.getMinecraft(), s);
-            session.setAccessible(false);
             name = "TempleClient 1.12.2 | User: " + Minecraft.getMinecraft().getSession().getUsername();
             Display.setTitle(name);
             logger.info("Session set successfully.");
         } catch (Exception e) {
-            e.printStackTrace();
-            logger.error("Failed to set session.", e);
+            if (logger != null) {
+                logger.error("Failed to set session.", e);
+            }
         }
     }
 

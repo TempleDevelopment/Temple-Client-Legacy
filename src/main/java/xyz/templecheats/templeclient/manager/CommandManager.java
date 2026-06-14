@@ -47,12 +47,16 @@ public class CommandManager {
         registerCommand(new DeathCoordsCommand());
         registerCommand(new DisconnectCommand());
         registerCommand(new FakePlayerCommand());
+        registerCommand(new FollowCommand());
         registerCommand(new FriendCommand());
+        registerCommand(new GotoCommand());
         registerCommand(new HelpCommand());
         registerCommand(new IpCommand());
+        registerCommand(new MineCommand());
         registerCommand(new NameMcCommand());
         registerCommand(new OpenFolderCommand());
         registerCommand(new PanicCommand());
+        registerCommand(new StopCommand());
         registerCommand(new ToggleCommand());
     }
 }

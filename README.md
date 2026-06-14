@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
   </a>
   <img src="https://img.shields.io/badge/License-GPL--3.0-00509E?style=for-the-badge&logoColor=white">
-  <img src="https://img.shields.io/badge/Temple%20Client%201.12.2-v1.9.7-4682B4?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Temple%20Client%201.12.2-v1.9.8-4682B4?style=for-the-badge">
   <img src="https://img.shields.io/badge/Minecraft-1.12.2-2A4D8B?style=for-the-badge&logo=minecraft&logoColor=white">
 </p>
 
@@ -34,6 +34,18 @@
 3. Get the latest Temple Client version in the release tab.
 4. Put the file in your `.minecraft/mods` folder.
 
+## Baritone (optional)
+Temple Client integrates with [Baritone](https://github.com/cabaletta/baritone) for pathfinding. Install the **1.12.2 (1.2.x)** Baritone Forge build into your `mods` folder to enable it, then use:
+
+| Command | Description |
+|---------|-------------|
+| `.goto <x> <y> <z>` / `<x> <z>` / `<y>` | Path to coordinates |
+| `.mine <block> [block2 ...]` | Mine blocks by name (e.g. `.mine diamond_ore`) |
+| `.follow <player>` | Follow a player |
+| `.stop` | Cancel all pathing |
+
+If Baritone isn't installed, these commands simply report that it's missing — the rest of the client is unaffected.
+
 ## Screenshots
 Normal GUI|CSGO GUI
 :-:|:-:
@@ -45,9 +57,3 @@ Normal GUI|CSGO GUI
 - [Zane2b2t](https://github.com/Zane2b2t)
 - [XeonLyfe](https://github.com/XeonLyfe)
 - [RacoonDog](https://github.com/RacoonDog)
-
----
-
-<p align="center">
-  Built by <a href="https://templeenterprise.com"><b>Temple Enterprise LLC</b></a>
-</p>

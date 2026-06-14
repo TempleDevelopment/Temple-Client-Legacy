@@ -17,6 +17,7 @@ import xyz.templecheats.templeclient.util.render.shader.impl.RectBuilder;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import static xyz.templecheats.templeclient.features.gui.font.Fonts.font20;
@@ -24,6 +25,7 @@ import static xyz.templecheats.templeclient.features.gui.font.Fonts.font20;
 public abstract class Panel {
     public static float[] counter1 = new float[]{1};
     private final List<Item> items = new ArrayList<>();
+    private final List<Item> allItems = new ArrayList<>();
     private final Minecraft mc = Minecraft.getMinecraft();
     //public Animation animation = new Animation(Easing.OutExpo, 300);
     private final String label;
@@ -145,6 +147,30 @@ public abstract class Panel {
 
     public void addButton(Button button) {
         this.items.add(button);
+        this.allItems.add(button);
+    }
+
+    /**
+     * Filters the visible items by a search query (matched against the item label).
+     * An empty query restores every item.
+     *
+     * @return true if at least one item matches.
+     */
+    public boolean filter(String query) {
+        this.items.clear();
+        if (query == null || query.isEmpty()) {
+            this.items.addAll(this.allItems);
+        } else {
+            final String lower = query.toLowerCase();
+            for (Item item : this.allItems) {
+                final String label = item.getLabel();
+                if (label != null && label.toLowerCase().contains(lower)) {
+                    this.items.add(item);
+                }
+            }
+        }
+        this.items.sort(Comparator.comparing(Item::getLabel));
+        return !this.items.isEmpty();
     }
 
     public void mouseReleased(int mouseX, int mouseY, int releaseButton) {
